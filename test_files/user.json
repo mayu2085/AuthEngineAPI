@@ -1,0 +1,6 @@
+{"_class":"com.sm.engine.domain.User","_id":{"$oid":"577e8a908000000000000000"},"enabled":true,"role":"RO","username":"ro_user1"}
+{"_class":"com.sm.engine.domain.User","_id":{"$oid":"577e8a908000000000000001"},"enabled":false,"role":"RO","username":"ro_user2"}
+{"_class":"com.sm.engine.domain.User","_id":{"$oid":"577e8a908000000000000002"},"enabled":true,"role":"RW","username":"rw_user1"}
+{"_class":"com.sm.engine.domain.User","_id":{"$oid":"577e8a908000000000000003"},"enabled":false,"role":"RW","username":"rw_user2"}
+{"_class":"com.sm.engine.domain.User","_id":{"$oid":"577e8a908000000000000004"},"enabled":true,"role":"Admin","username":"admin_user1"}
+{"_class":"com.sm.engine.domain.User","_id":{"$oid":"577e8a908000000000000005"},"enabled":false,"role":"Admin","username":"admin_user2"}

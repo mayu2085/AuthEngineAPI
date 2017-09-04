@@ -1,0 +1,4 @@
+{"_class":"com.sm.engine.domain.System","_id":{"$oid":"577e8a907000000000000001"},"description":"description 1","name":"name 1"}
+{"_class":"com.sm.engine.domain.System","_id":{"$oid":"577e8a907000000000000002"},"description":"description 2","name":"name 2"}
+{"_class":"com.sm.engine.domain.System","_id":{"$oid":"577e8a907000000000000003"},"description":"description 3","name":"name 3"}
+{"_class":"com.sm.engine.domain.System","_id":{"$oid":"577e8a907000000000000004"},"description":"description 4","name":"name 4"}

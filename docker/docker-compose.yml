@@ -1,0 +1,30 @@
+version: '2'
+services:
+  openldap:
+    build: .
+    container_name: openldap
+    environment:
+      LDAP_LOG_LEVEL: "256"
+      LDAP_ORGANISATION: "Example Inc."
+      LDAP_DOMAIN: "example.org"
+      LDAP_BASE_DN: ""
+      LDAP_ADMIN_PASSWORD: "sm"
+    ports:
+      - "8389:389"
+    domainname: "example.org"
+    hostname: "example.org"
+  phpldapadmin:
+    image: osixia/phpldapadmin:latest
+    container_name: phpldapadmin
+    environment:
+      PHPLDAPADMIN_LDAP_HOSTS: "openldap"
+      PHPLDAPADMIN_HTTPS: "false"
+    ports:
+      - "8080:80"
+    depends_on:
+      - openldap
+  mongo:
+    image: mongo:3.4.7
+    container_name: mongo
+    ports:
+      - "27017:27017"

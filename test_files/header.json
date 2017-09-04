@@ -1,0 +1,6 @@
+{"_class":"com.sm.engine.domain.Header","_id":{"$oid":"577e8a902000000000000001"},"type":"STATIC", "description":"description 1","headerName":"static true","value":"True"}
+{"_class":"com.sm.engine.domain.Header","_id":{"$oid":"577e8a902000000000000002"},"type":"STATIC","description":"description 2","headerName":"static false","value":"False"}
+{"_class":"com.sm.engine.domain.Header","_id":{"$oid":"577e8a902000000000000003"},"type":"DYNAMIC","description":"description 3","headerName":"ldap_cn","value":"cn"}
+{"_class":"com.sm.engine.domain.Header","_id":{"$oid":"577e8a902000000000000004"},"type":"DYNAMIC","description":"description 4","headerName":"ldap_uid","value":"uid"}
+{"_class":"com.sm.engine.domain.Header","_id":{"$oid":"577e8a902000000000000005"},"type":"DYNAMIC","description":"description 5","headerName":"ldap_objectclass","value":"objectclass"}
+{"_class":"com.sm.engine.domain.Header","_id":{"$oid":"577e8a902000000000000006"},"type":"DYNAMIC","description":"description 6","headerName":"ldap_sn","value":"sn"}

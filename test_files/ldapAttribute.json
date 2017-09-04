@@ -1,0 +1,10 @@
+{"_class":"com.sm.engine.domain.LdapAttribute","_id":{"$oid":"577e8a903000000000000001"},"enabled":true,"name":"cn"}
+{"_class":"com.sm.engine.domain.LdapAttribute","_id":{"$oid":"577e8a903000000000000002"},"enabled":true,"name":"sn"}
+{"_class":"com.sm.engine.domain.LdapAttribute","_id":{"$oid":"577e8a903000000000000003"},"enabled":true,"name":"uid"}
+{"_class":"com.sm.engine.domain.LdapAttribute","_id":{"$oid":"577e8a903000000000000004"},"enabled":true,"name":"objectclass"}
+{"_class":"com.sm.engine.domain.LdapAttribute","_id":{"$oid":"577e8a903000000000000005"},"enabled":false,"name":"dn"}
+{"_class":"com.sm.engine.domain.LdapAttribute","_id":{"$oid":"577e8a903000000000000006"},"enabled":false,"name":"name 6"}
+{"_class":"com.sm.engine.domain.LdapAttribute","_id":{"$oid":"577e8a903000000000000007"},"enabled":false,"name":"name 7"}
+{"_class":"com.sm.engine.domain.LdapAttribute","_id":{"$oid":"577e8a903000000000000008"},"enabled":false,"name":"name 8"}
+{"_class":"com.sm.engine.domain.LdapAttribute","_id":{"$oid":"577e8a903000000000000009"},"enabled":false,"name":"name 9"}
+{"_class":"com.sm.engine.domain.LdapAttribute","_id":{"$oid":"577e8a903000000000000010"},"enabled":false,"name":"name 10"}

@@ -1,0 +1,2738 @@
+{
+	"id": "aacac030-8179-b287-e1d6-2927c8881275",
+	"name": "sm-engine-crud-api",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"id": "7325e8ee-ed86-9975-5a78-c8e7c85e1104",
+			"name": "/activity-logs",
+			"description": "",
+			"order": [
+				"8097e4bc-adac-b407-6d10-ab9f1100b4d0"
+			],
+			"owner": 0
+		},
+		{
+			"id": "bb5555d1-10dc-d847-66a6-25db3605eb48",
+			"name": "/headers",
+			"description": "",
+			"order": [
+				"a872c967-1a77-23ca-17a0-a90b3719d0d6",
+				"03da0c32-1f9b-1744-92ac-b66aad8e4727",
+				"57e3f78f-1088-5897-5950-0d8a40766da4",
+				"5bb60cf2-d6bf-d2cd-3109-5dfe96ff8125",
+				"f44308b4-0c5d-2e7b-db1d-835f178d660a",
+				"c592de61-a11c-73c6-3735-8141c12100bd",
+				"2fc479aa-722f-dc5a-c4ed-89fca2fc6089",
+				"cac91974-ae82-8771-8d8f-0acefbee7c14"
+			],
+			"owner": 0,
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275"
+		},
+		{
+			"id": "cc29f1dc-c6db-7aee-8ddb-12ea325901e2",
+			"name": "/headers/evaluate",
+			"description": "",
+			"order": [
+				"b144955d-2cfa-d2dd-1a7e-05f2c0e98f14",
+				"5a3184e7-c775-1e2b-f79e-e4879238909d",
+				"59d086cc-bbec-9098-f76f-5318923a8014",
+				"83a43c7d-711a-05a6-83ba-78408a8d8d98"
+			],
+			"owner": 0,
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275"
+		},
+		{
+			"id": "a5c3490b-3932-9fd2-c6b0-e9c2c53e973c",
+			"name": "/ldap-attributes",
+			"description": "",
+			"order": [
+				"e80ab0c9-1e94-43a6-60e6-67cdf250ee38"
+			],
+			"owner": 0
+		},
+		{
+			"id": "c3ad52b9-b067-ce90-c340-e102424b28d0",
+			"name": "/ldap-configurations",
+			"description": "",
+			"order": [
+				"4a117cb7-04bc-8c8a-6026-7158e815b3a0",
+				"26e491e1-c77f-4173-1998-432579caec0f",
+				"f4703a6d-128c-4bce-d94e-7f1eaf3ed44d",
+				"c4533039-420a-2493-4c9e-9fa7ec3d5333",
+				"d044a3b5-f43c-55ea-832f-58ba5437d99d",
+				"348f469c-44e4-e5a5-1239-1e810ca0c02c",
+				"70af6ec9-907e-b325-0999-29309649c11c"
+			],
+			"owner": 0,
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275"
+		},
+		{
+			"id": "228cdb89-4b94-ca4f-8e1c-01f65716fc6c",
+			"name": "/login",
+			"description": "",
+			"order": [
+				"d0fff2ec-e272-2eaa-8448-8a034f2a6062",
+				"26e70168-4c5d-0880-802f-2aeb80fb12ba",
+				"631ba786-a404-634a-d62c-8377bec08c37",
+				"3121c371-f512-f215-2a21-e7671eed5c90",
+				"fef6084d-7a2d-391d-0c66-76da03ecc6a7",
+				"b69c7765-3806-4b24-712e-4d0db87ec0fc",
+				"9d8e2f1b-a52b-1fa7-36eb-9897f1f7ad9a",
+				"bbd1ef28-3b7b-9487-258b-cc79892818e2"
+			],
+			"owner": 0,
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275"
+		},
+		{
+			"id": "59598eb8-c6ee-6c8e-86bd-46bfa41be756",
+			"name": "/modules",
+			"description": "",
+			"order": [
+				"a680e525-6b27-4b36-8c1e-8830c4c5a833",
+				"1d75bbf4-8a48-fe04-ace4-1f0cfd6a6b18",
+				"9c79df8b-f986-e5d6-0b46-ead735f00dd4",
+				"d2b4c92f-fa32-e862-e5fd-6f1edfae2247",
+				"c10822c2-9e07-19d7-c3cd-ea178047c866",
+				"1fac4b7f-cdf4-0884-f456-a1609d406d01",
+				"cbad9c04-d597-581d-777d-b16471d6f043",
+				"9145196d-a4e1-4353-873e-97c996735c16",
+				"687cf776-e6d8-d31f-b24f-8964a94b5ef1"
+			],
+			"owner": 0,
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275"
+		},
+		{
+			"id": "f7f1f75a-35f7-b9e0-f3b1-19a8bc45fcee",
+			"name": "/policies",
+			"description": "",
+			"order": [
+				"5c487eac-41e2-7653-6843-6c896c7b34ab",
+				"5ad1f8a8-8cd3-21ee-1697-f9f21e01458f",
+				"4f587b1e-4c0b-2ea7-8180-6348602ea0cc",
+				"1422f6b5-da09-70a1-77e7-5157fcc2b9a6",
+				"20e29df9-246d-0fc5-7c2e-9331b539c6e9",
+				"5c3aab9f-b617-1ed2-3408-e7a5e3e9a47c",
+				"e933928c-a2b2-3fd0-c213-6ca2742831d1"
+			],
+			"owner": 0,
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275"
+		},
+		{
+			"id": "73e3d261-e8cd-3f81-b101-c32ead8704dd",
+			"name": "/systems",
+			"description": "",
+			"order": [
+				"90bbb786-4dc5-a038-4cca-381e9fe5aa2d",
+				"d81a0303-a6aa-3fe6-64cb-4026d82221bf",
+				"1d7f5a0a-5d79-f46b-1dfe-e368e69d2ab1",
+				"03e5f233-60c0-69f2-dfca-28a8259002f4",
+				"eb91c4cc-c831-6804-0e85-02c662eadeb1"
+			],
+			"owner": 0,
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275"
+		},
+		{
+			"id": "35aa29e5-1652-12c3-6f75-c68775aa6768",
+			"name": "/users",
+			"description": "",
+			"order": [
+				"450f045f-78e2-c010-f82e-6089100547c7",
+				"931c245c-4760-d9d4-7e33-7bb02935ae28",
+				"a7fc50fc-1b1a-b141-140f-660752502973",
+				"c806d244-42a3-8707-5c9d-17b1d886231a",
+				"3db85efe-b83a-8995-bba6-aaffcf5fcac4"
+			],
+			"owner": 0,
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275"
+		},
+		{
+			"id": "7f9383d0-6ee4-dca0-1f52-ea8e6c8a4498",
+			"name": "Invalid",
+			"description": "",
+			"order": [
+				"a2fb3ae7-23d3-145c-6b27-f57824bfbf3c",
+				"9a0f067d-c34f-aa2d-2f08-a8d867da7d0b",
+				"7af6461a-9689-c5e0-314c-1e1a990ac399",
+				"908bc59e-a0c9-44bb-cf51-2d17dc91bfea",
+				"b61f7120-b727-2e05-c5e7-0d12e37e8080",
+				"53afb373-473f-7310-281e-93c498ad1254"
+			],
+			"owner": 0
+		}
+	],
+	"timestamp": 0,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "03da0c32-1f9b-1744-92ac-b66aad8e4727",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/headers",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503500884855,
+			"name": "{{URL}}/headers with static header",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n\t\"description\" : \"description test\",\n\t\"headerName\" : \"static header name test\",\n\t\"type\":\"Static\",\n\t\"value\":\"True\"\n}"
+		},
+		{
+			"id": "03e5f233-60c0-69f2-dfca-28a8259002f4",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/systems/577e8a907000000000000003",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503119105552,
+			"name": "{{URL}}/systems/{id}",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n    \"description\": \"description 411\",\n    \"name\": \"name 411\"\n}"
+		},
+		{
+			"id": "1422f6b5-da09-70a1-77e7-5157fcc2b9a6",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/policies/577e8a906000000000000004",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503496090299,
+			"name": "{{URL}}/policies/{id} and update referenced entities",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n    \"description\": \"description 1\",\n    \"enabled\": true,\n    \"rules\": [\n        {\n            \"name\": \"rule 1\",\n            \"ruleInfo\": [\n                {\n                    \"name\": \"attribute 1\",\n                    \"value\": \"value 1\"\n                },\n                {\n                    \"name\": \"attribute 2\",\n                    \"value\": \"value 2\"\n                },\n                {\n                    \"name\": \"attribute 3\",\n                    \"value\": \"value 3\"\n                }\n            ],\n            \n            \"header\":{\n            \"description\": \"update description 2\",\n             \"type\":\"Static\",\n             \"headerName\" : \"new static header name test\",\n             \"value\":\"False\",\n             \"id\": \"577e8a902000000000000002\"\n          }\n        },\n        {\n            \"name\": \"rule 2\",\n            \"ruleInfo\": [\n                {\n                    \"name\": \"attribute 2\",\n                    \"value\": \"value 2\"\n                }\n            ],\n             \"header\":{\n            \"description\": \"update description 3\",\n             \"type\":\"Dynamic\",\n             \"headerName\" : \"ldap_cn\",\n             \"value\":\"cn\",\n            \"id\": \"577e8a902000000000000003\"\n        }\n        }\n    ],\n    \"module\": {\n        \"description\": \"description 2\",\n        \"system\": {\n            \"description\": \"description 2\",\n            \"id\": \"577e8a907000000000000002\",\n            \"createdAt\": null,\n            \"name\": \"new system by policy\"\n        },\n        \"id\": \"577e8a905000000000000002\",\n        \"createdAt\": null,\n        \"name\": \"new module by policy\"\n    },\n    \"name\": \"new policy and update referenced entities\"\n}"
+		},
+		{
+			"id": "1d75bbf4-8a48-fe04-ace4-1f0cfd6a6b18",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/modules",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503137174807,
+			"name": "{{URL}}/modules and update system",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n    \"description\": \"create module with udpated system description\",\n    \"system\": {\n        \"description\": \"new sytem updated by module\",\n        \"id\": \"577e8a907000000000000001\",\n        \"name\": \"new sytem updated by module\"\n    },\n    \"name\": \"create module with udpated system\"\n}"
+		},
+		{
+			"id": "1d7f5a0a-5d79-f46b-1dfe-e368e69d2ab1",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/systems",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503119134895,
+			"name": "{{URL}}/systems",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n    \"description\": \"description 41\",\n    \"name\": \"create sytem name\"\n}"
+		},
+		{
+			"id": "1fac4b7f-cdf4-0884-f456-a1609d406d01",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/modules/577e8a905000000000000003",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503137206638,
+			"name": "{{URL}}/modules/{id}",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n    \"description\": \"description 311\",\n    \"system\": {\n        \"description\": \"description 11\",\n        \"id\": \"577e8a907000000000000001\",\n        \"name\": \"name 11\"\n    },\n    \"name\": \"name 311\"\n}"
+		},
+		{
+			"id": "20e29df9-246d-0fc5-7c2e-9331b539c6e9",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/policies/577e8a906000000000000004",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503496150004,
+			"name": "{{URL}}/policies/{id} and create referenced entities",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n    \"description\": \"description 1\",\n    \"enabled\": true,\n    \"rules\": [\n        {\n            \"name\": \"rule 1\",\n            \"ruleInfo\": [\n                {\n                    \"name\": \"attribute 1\",\n                    \"value\": \"value 1\"\n                },\n                {\n                    \"name\": \"attribute 2\",\n                    \"value\": \"value 2\"\n                },\n                {\n                    \"name\": \"attribute 3\",\n                    \"value\": \"value 3\"\n                }\n            ],\n             \"header\": {\n            \"description\": \"description 2\",\n            \"type\":\"Static\",\n             \"headerName\" : \"new test header 1 created by policy\",\n               \"value\":\"False\"\n            }\n        },\n        {\n            \"name\": \"rule 2\",\n            \"ruleInfo\": [\n                {\n                    \"name\": \"attribute 2\",\n                    \"value\": \"value 2\"\n                }\n            ],\n             \"header\": {\n            \"description\": \"description 111\",\n            \"type\":\"Static\",\n             \"headerName\" : \"new test header 2 created by policy\",\n               \"value\":\"False\"\n            }\n        }\n    ],\n    \"module\": {\n        \"description\": \"description 2\",\n        \"system\": {\n            \"description\": \"description 2\",\n            \"id\": \"577e8a907000000000000002\",\n            \"createdAt\": null,\n            \"name\": \"created new system for new policy\"\n        },\n        \"id\": \"577e8a905000000000000002\",\n        \"createdAt\": null,\n        \"name\": \"created new module for new policy\"\n    },\n    \"name\": \"new policy and create referenced entities\"\n}"
+		},
+		{
+			"id": "26e491e1-c77f-4173-1998-432579caec0f",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/ldap-configurations",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503137129793,
+			"name": "{{URL}}/ldap-configurations",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{    \n\t\"name\": \"ldap configuration demo\",\n    \"url\": \"ldap://localhost:8889\",\n    \"userDn\": \"uid=ben,ou=people,dc=example,dc=org\",\n    \"password\": \"benspassword\",\n    \"root\": \"dc=example,dc=org\",\n    \"userSearchBase\":\"ou=people\",\n    \"userAttribute\":\"uid\",\n    \"enabled\":false\n}"
+		},
+		{
+			"id": "26e70168-4c5d-0880-802f-2aeb80fb12ba",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503139199797,
+			"name": "{{URL}}/login with RW role",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n\t\"username\":\"rw_user1\",\n\t\"password\":\"secret\"\n}"
+		},
+		{
+			"id": "2fc479aa-722f-dc5a-c4ed-89fca2fc6089",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/headers",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503497919046,
+			"name": "create dynamic headers with same names",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n\t\"description\" : \"description test\",\n\t\"headerName\" : \"ldap_cn\",\n\t\"type\":\"Dynamic\",\n\t\"value\":\"True\"\n}"
+		},
+		{
+			"id": "3121c371-f512-f215-2a21-e7671eed5c90",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503137002437,
+			"name": "{{URL}}/login with not exist user in mongo",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n\t\"username\":\"ben\",\n\t\"password\":\"benspassword\"\n}"
+		},
+		{
+			"id": "348f469c-44e4-e5a5-1239-1e810ca0c02c",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/ldap-configurations/577e8a904000000000000004",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503112825721,
+			"name": "{{URL}}/ldap-configurations/{id}",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "3db85efe-b83a-8995-bba6-aaffcf5fcac4",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/users/577e8a908000000000000003",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503119491801,
+			"name": "{{URL}}/users/{id}",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n    \"username\": \"newadmin_user2\",\n    \"role\": \"Admin\",\n    \"enabled\": false\n}"
+		},
+		{
+			"id": "450f045f-78e2-c010-f82e-6089100547c7",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/users?page=0&size=3&sort=role,asc&username=user1&role=RW&enabled=true",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "3",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "sort",
+					"value": "role,asc",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "username",
+					"value": "user1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "role",
+					"value": "RW",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "enabled",
+					"value": "true",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503137139036,
+			"name": "{{URL}}/users",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n  \"username\": \"new username\",\n  \"role\": \"RO\",\n  \"enabled\": true\n}"
+		},
+		{
+			"id": "4a117cb7-04bc-8c8a-6026-7158e815b3a0",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/ldap-configurations?page=0&size=2&sort=name,desc&name=na&enabled=true",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "2",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "sort",
+					"value": "name,desc",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "na",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "enabled",
+					"value": "true",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503137108202,
+			"name": "{{URL}}/ldap-configurations",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": []
+		},
+		{
+			"id": "4f587b1e-4c0b-2ea7-8180-6348602ea0cc",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/policies",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503496011955,
+			"name": "{{URL}}/policies and create referenced entities ",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n    \"description\": \"description 1\",\n    \"enabled\": true,\n    \"rules\": [\n        {\n            \"name\": \"rule 1\",\n            \"ruleInfo\": [\n                {\n                    \"name\": \"attribute 1\",\n                    \"value\": \"value 1\"\n                },\n                {\n                    \"name\": \"attribute 2\",\n                    \"value\": \"value 2\"\n                },\n                {\n                    \"name\": \"attribute 3\",\n                    \"value\": \"value 3\"\n                }\n            ],\n            \"header\": {\n            \"description\": \"description 2\",\n            \"type\":\"Static\",\n             \"headerName\" : \"header 1 created by policy\",\n               \"value\":\"True\"\n            }\n         },\n        {\n            \"name\": \"rule 2\",\n            \"ruleInfo\": [\n                {\n                    \"name\": \"attribute 2\",\n                    \"value\": \"value 2\"\n                }\n            ],\n            \"header\": {\n            \"description\": \"description 3\",\n            \"type\":\"Dynamic\",\n            \"headerName\" : \"header 2 created by policy\",\n            \"value\":\"cn\"\n        }\n        }\n    ],\n    \"module\": {\n        \"description\": \"description 2\",\n        \"system\": {\n            \"description\": \"description 2\",\n            \"createdAt\": null,\n            \"name\": \"sytem created by policy\"\n        },\n        \"createdAt\": null,\n        \"name\": \"module created by policy\"\n    },\n    \"name\": \"policy and create referenced entities\"\n}"
+		},
+		{
+			"id": "53afb373-473f-7310-281e-93c498ad1254",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbl91c2VyMSIsImV4cCI6MTUwMzA1NjQwMX0.ostN5tEm2KVbCMZKdY7VpnzxRkhertQQQZVvJ7zzaBCZv7G3PH3rm_B228rerekiqNVQ-BWHAcWQfYZBUNdikw\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbl91c2VyMSIsImV4cCI6MTUwMzA1NjQwMX0.ostN5tEm2KVbCMZKdY7VpnzxRkhertQQQZVvJ7zzaBCZv7G3PH3rm_B228rerekiqNVQ-BWHAcWQfYZBUNdikw",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/users?page=0&size=3&sort=role,asc&username=user1&role=RW",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "3",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "sort",
+					"value": "role,asc",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "username",
+					"value": "user1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "role",
+					"value": "RW",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503056415577,
+			"name": "{{URL}}/users with expired token",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n  \"username\": \"new username\",\n  \"role\": \"RO\",\n  \"enabled\": true\n}"
+		},
+		{
+			"id": "57e3f78f-1088-5897-5950-0d8a40766da4",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/headers",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503495511993,
+			"name": "{{URL}}/headers with dynamic header",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n\t\"description\" : \"description test\",\n\t\"headerName\" : \"dynamic header name test\",\n\t\"type\":\"Dynamic\",\n\t\"value\":\"sn\"\n}"
+		},
+		{
+			"id": "59d086cc-bbec-9098-f76f-5318923a8014",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/headers/evaluate/admin_user1?moduleId=577e8a905000000000000002",
+			"queryParams": [
+				{
+					"key": "moduleId",
+					"value": "577e8a905000000000000002",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503495679500,
+			"name": "evaluate with valid module Id",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": []
+		},
+		{
+			"id": "5a3184e7-c775-1e2b-f79e-e4879238909d",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/headers/evaluate/notexist",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503137094984,
+			"name": "evaluate with not exist username",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": []
+		},
+		{
+			"id": "5ad1f8a8-8cd3-21ee-1697-f9f21e01458f",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/policies",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503497458055,
+			"name": "{{URL}}/policies and update referenced entities",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n    \"description\": \"description 1\",\n    \"enabled\": true,\n    \"rules\": [\n        {\n            \"ruleInfo\": [\n                {\n                    \"name\": \"attribute 1\",\n                    \"value\": \"value 1\"\n                },\n                {\n                    \"name\": \"attribute 2\",\n                    \"value\": \"value 2\"\n                },\n                {\n                    \"name\": \"attribute 3\",\n                    \"value\": \"value 3\"\n                }\n            ],\n            \"header\":{\n            \"description\": \"description 2\",\n             \"type\":\"Static\",\n             \"headerName\" : \"new static header name test\",\n             \"value\":\"False\",\n             \"id\": \"577e8a902000000000000002\"\n          }\n        },\n        {\n            \"name\": \"rule 2\",\n            \"ruleInfo\": [\n                {\n                    \"name\": \"attribute 2\",\n                    \"value\": \"value 2\"\n                }\n            ],\n            \"header\":{\n            \"description\": \"description 3\",\n             \"type\":\"Dynamic\",\n             \"headerName\" : \"ldap_cn\",\n             \"value\":\"cn\",\n            \"id\": \"577e8a902000000000000003\"\n        }\n        }\n    ],\n    \"module\": {\n        \"description\": \"description 2\",\n        \"system\": {\n            \"description\": \"description 2\",\n            \"id\": \"577e8a907000000000000002\",\n            \"createdAt\": null,\n            \"name\": \"update system by policy\"\n        },\n        \"id\": \"577e8a905000000000000002\",\n        \"createdAt\": null,\n        \"name\": \"update module 1 by policy\"\n    },\n    \"name\": \"name 11\"\n}"
+		},
+		{
+			"id": "5bb60cf2-d6bf-d2cd-3109-5dfe96ff8125",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/headers/577e8a902000000000000002",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503495540153,
+			"name": "{{URL}}/headers/{id}",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n\t\"description\" : \"description 141\",\n\t\"name\" : \"name 141\",\n\t\"staticVariables\" : [\n\t\t{\n\t\t\t\"name\" : \"name 11\",\n\t\t\t\"value\" : true\n\t\t},\n\t\t{\n\t\t\t\"name\" : \"name 12\",\n\t\t\t\"value\" : false\n\t\t},\n\t\t{\n\t\t\t\"name\" : \"name 13\",\n\t\t\t\"value\" : false\n\t\t}\n\t],\n\t\"userAttributes\" : [{\"headerName\":\"new_ldap_cn\",\"attributeName\":\"cn\"}]\n}"
+		},
+		{
+			"id": "5c3aab9f-b617-1ed2-3408-e7a5e3e9a47c",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/policies/577e8a906000000000000004",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503025840098,
+			"name": "{{URL}}/policies/{id}",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "5c487eac-41e2-7653-6843-6c896c7b34ab",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/policies?page=0&size=4&sort=name,asc&name=na&moduleId=577e8a905000000000000002&enabled=true",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "4",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "sort",
+					"value": "name,asc",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "na",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "moduleId",
+					"value": "577e8a905000000000000002",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "enabled",
+					"value": "true",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503137031796,
+			"name": "{{URL}}/policies",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": []
+		},
+		{
+			"id": "631ba786-a404-634a-d62c-8377bec08c37",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503136999393,
+			"name": "{{URL}}/login with RO role",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n\t\"username\":\"ro_user1\",\n\t\"password\":\"secret\"\n}"
+		},
+		{
+			"id": "687cf776-e6d8-d31f-b24f-8964a94b5ef1",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/modules/577e8a905000000000000004",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503025890755,
+			"name": "{{URL}}/modules/{id}",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "70af6ec9-907e-b325-0999-29309649c11c",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/ldap-configurations?page=0&size=21&sort=lastModifiedAt,desc&enabled=true",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "21",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "sort",
+					"value": "lastModifiedAt,desc",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "enabled",
+					"value": "true",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503139181160,
+			"name": "latest endabled ldap-configurations",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": []
+		},
+		{
+			"id": "7af6461a-9689-c5e0-314c-1e1a990ac399",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{ROTOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{ROTOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/users?page=0&size=3&sort=role,asc&username=user1&role=RW",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "3",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "sort",
+					"value": "role,asc",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "username",
+					"value": "user1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "role",
+					"value": "RW",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503056507475,
+			"name": "{{URL}}/users with wrong role token",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n  \"username\": \"new username\",\n  \"role\": \"RO\",\n  \"enabled\": true\n}"
+		},
+		{
+			"id": "8097e4bc-adac-b407-6d10-ab9f1100b4d0",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/activity-logs?page=0&size=4&sort=createdAt,desc&operatedBy=u&documentType=Policy&operationType=Change&description=tion",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "4",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "sort",
+					"value": "createdAt,desc",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "operatedBy",
+					"value": "u",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "documentType",
+					"value": "Policy",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "operationType",
+					"value": "Change",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "description",
+					"value": "tion",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503026021681,
+			"name": "{{URL}}/activity-logs",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n  \"username\": \"new username\",\n  \"role\": \"RO\",\n  \"enabled\": true\n}"
+		},
+		{
+			"id": "83a43c7d-711a-05a6-83ba-78408a8d8d98",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/headers/evaluate/admin_user1?moduleId=noexist",
+			"queryParams": [
+				{
+					"key": "moduleId",
+					"value": "noexist",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503495699260,
+			"name": "evaluate with not exist module Id",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": []
+		},
+		{
+			"id": "908bc59e-a0c9-44bb-cf51-2d17dc91bfea",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJub3RleGlzdCIsImV4cCI6MTUxMTY5NTg2M30.KwIFV1TyhCdH670tWIddy2hJ7JWLSDSF358IsHs59CIY3P1qT7zOatEq6yGIj7A38U2FXB-N-vWvYi_QQDHYnQ\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJub3RleGlzdCIsImV4cCI6MTUxMTY5NTg2M30.KwIFV1TyhCdH670tWIddy2hJ7JWLSDSF358IsHs59CIY3P1qT7zOatEq6yGIj7A38U2FXB-N-vWvYi_QQDHYnQ",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/users?page=0&size=3&sort=role,asc&username=user1&role=RW",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "3",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "sort",
+					"value": "role,asc",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "username",
+					"value": "user1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "role",
+					"value": "RW",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503055875930,
+			"name": "{{URL}}/users with not exist user token",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n  \"username\": \"new username\",\n  \"role\": \"RO\",\n  \"enabled\": true\n}"
+		},
+		{
+			"id": "90bbb786-4dc5-a038-4cca-381e9fe5aa2d",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/systems?page=0&size=3&sort=name,desc&name=na",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "3",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "sort",
+					"value": "name,desc",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "na",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503025755418,
+			"name": "{{URL}}/systems",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": []
+		},
+		{
+			"id": "9145196d-a4e1-4353-873e-97c996735c16",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/modules/577e8a905000000000000003",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503120094010,
+			"name": "{{URL}}/modules/{id} with new system",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n    \"description\": \"description 311\",\n    \"system\": {\n        \"description\": \"description 11\",\n        \"name\": \"new sytem updated by module\"\n    },\n    \"name\": \"updated module with new system\"\n}"
+		},
+		{
+			"id": "931c245c-4760-d9d4-7e33-7bb02935ae28",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/users/577e8a908000000000000005",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503118931813,
+			"name": "{{URL}}/users/{id}",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n    \"username\": \"admin_user1112333\",\n    \"role\": \"Admin\",\n    \"enabled\": false\n}"
+		},
+		{
+			"id": "9a0f067d-c34f-aa2d-2f08-a8d867da7d0b",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer wrong\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer wrong",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/users?page=0&size=3&sort=role,asc&username=user1&role=RW",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "3",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "sort",
+					"value": "role,asc",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "username",
+					"value": "user1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "role",
+					"value": "RW",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503055621160,
+			"name": "{{URL}}/users with invalid auth header",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n  \"username\": \"new username\",\n  \"role\": \"RO\",\n  \"enabled\": true\n}"
+		},
+		{
+			"id": "9c79df8b-f986-e5d6-0b46-ead735f00dd4",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/systems/577e8a907000000000000001",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503137179865,
+			"name": "{{URL}}/systems/{id}",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n    \"description\": \"create module with udpated system description\",\n    \"system\": {\n        \"description\": \"new sytem updated by module\",\n        \"id\": \"577e8a907000000000000001\",\n        \"name\": \"new sytem updated by module\"\n    },\n    \"name\": \"create module with udpated system\"\n}"
+		},
+		{
+			"id": "9d8e2f1b-a52b-1fa7-36eb-9897f1f7ad9a",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503137021034,
+			"name": "{{URL}}/login with not exist user in ldap",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n\t\"username\":\"notexist\",\n\t\"password\":\"wrong\"\n}"
+		},
+		{
+			"id": "a2fb3ae7-23d3-145c-6b27-f57824bfbf3c",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/users?page=0&size=3&sort=role,asc&username=user1&role=RW",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "3",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "sort",
+					"value": "role,asc",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "username",
+					"value": "user1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "role",
+					"value": "RW",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503055234763,
+			"name": "{{URL}}/users without auth header",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n  \"username\": \"new username\",\n  \"role\": \"RO\",\n  \"enabled\": true\n}"
+		},
+		{
+			"id": "a680e525-6b27-4b36-8c1e-8830c4c5a833",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/modules?page=0&size=4&sort=name,asc&name=na&systemId=577e8a907000000000000001",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "4",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "sort",
+					"value": "name,asc",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "na",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "systemId",
+					"value": "577e8a907000000000000001",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503025852323,
+			"name": "{{URL}}/modules",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": []
+		},
+		{
+			"id": "a7fc50fc-1b1a-b141-140f-660752502973",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/users",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503118940529,
+			"name": "{{URL}}/users",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n    \"username\": \"admin_user111\",\n    \"role\": \"Admin\",\n    \"enabled\": false\n}"
+		},
+		{
+			"id": "a872c967-1a77-23ca-17a0-a90b3719d0d6",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/headers?page=0&size=4&sort=headerName,asc&headerName=na",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "4",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "sort",
+					"value": "headerName,asc",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "headerName",
+					"value": "na",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503500837859,
+			"name": "{{URL}}/headers",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": []
+		},
+		{
+			"id": "b144955d-2cfa-d2dd-1a7e-05f2c0e98f14",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/headers/evaluate/admin_user1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503137042172,
+			"name": "{{URL}}/headers/evaluate/{username}",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": []
+		},
+		{
+			"id": "b61f7120-b727-2e05-c5e7-0d12e37e8080",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyb191c2VyMiIsImV4cCI6MTUxMTcwMDY5MH0.ZthZ9-e7cDYlGKuNyr8h-73SCqEzbo7xPSSI7oFR_apqbMleCO8KUfBEyw3W0lqHomU-eKzdVgx1D1Nq7ZArIQ\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyb191c2VyMiIsImV4cCI6MTUxMTcwMDY5MH0.ZthZ9-e7cDYlGKuNyr8h-73SCqEzbo7xPSSI7oFR_apqbMleCO8KUfBEyw3W0lqHomU-eKzdVgx1D1Nq7ZArIQ",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/users?page=0&size=3&sort=role,asc&username=user1&role=RW",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "3",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "sort",
+					"value": "role,asc",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "username",
+					"value": "user1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "role",
+					"value": "RW",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503060716999,
+			"name": "{{URL}}/users with disabled user token",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n  \"username\": \"new username\",\n  \"role\": \"RO\",\n  \"enabled\": true\n}"
+		},
+		{
+			"id": "b69c7765-3806-4b24-712e-4d0db87ec0fc",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503137015882,
+			"name": "{{URL}}/login with wrong password",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n\t\"username\":\"admin_user1\",\n\t\"password\":\"wrong\"\n}"
+		},
+		{
+			"id": "bbd1ef28-3b7b-9487-258b-cc79892818e2",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503056643698,
+			"name": "{{URL}}/login with invalid request",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "c10822c2-9e07-19d7-c3cd-ea178047c866",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/modules",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503137191204,
+			"name": "{{URL}}/modules and create new system",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n    \"description\": \"create module with new system desc\",\n    \"system\": {\n        \"description\": \"system created by module description\",\n        \"name\": \"system created by module\"\n    },\n    \"name\": \"create module with new system\"\n}"
+		},
+		{
+			"id": "c4533039-420a-2493-4c9e-9fa7ec3d5333",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/ldap-configurations/577e8a904000000000000002",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503115296065,
+			"name": "{{URL}}/ldap-configurations/{id}",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{    \n\t\"name\": \"new name\",\n    \"url\": \"ldap://localhost:8889\",\n    \"userDn\": \"uid=bob,ou=people,dc=example,dc=org\",\n    \"password\": \"bobspassword\",\n    \"root\": \"dc=example,dc=org\",\n    \"userSearchBase\":\"ou=people\",\n    \"userAttribute\":\"uid\",\n    \"enabled\":false\n}"
+		},
+		{
+			"id": "c592de61-a11c-73c6-3735-8141c12100bd",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/headers/577e8a902000000000000004",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503040095655,
+			"name": "{{URL}}/headers/{id}",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "c806d244-42a3-8707-5c9d-17b1d886231a",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer {{TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/users/577e8a908000000000000005",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503119497692,
+			"name": "{{URL}}/users/{id}",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n    \"username\": \"newadmin_user2\",\n    \"role\": \"Admin\",\n    \"enabled\": false\n}"
+		},
+		{
+			"id": "cac91974-ae82-8771-8d8f-0acefbee7c14",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/headers",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503497939795,
+			"name": "create static header with wrong value",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n\t\"description\" : \"description test\",\n\t\"headerName\" : \"wrong static value\",\n\t\"type\":\"Static\",\n\t\"value\":\"wrong\"\n}"
+		},
+		{
+			"id": "cbad9c04-d597-581d-777d-b16471d6f043",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/modules/577e8a905000000000000003",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503137201591,
+			"name": "{{URL}}/modules/{id} with updated sytem",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n    \"description\": \"description 311\",\n    \"system\": {\n        \"description\": \"description 11\",\n        \"id\": \"577e8a907000000000000001\",\n        \"name\": \"updated sytem updated by module\"\n    },\n    \"name\": \"updated module with updated system\"\n}"
+		},
+		{
+			"id": "d044a3b5-f43c-55ea-832f-58ba5437d99d",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/ldap-configurations/577e8a904000000000000002",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503139177249,
+			"name": "docker ldap configuration",
+			"description": "Update url if necessary",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{    \n\t\"name\": \"new name\",\n    \"url\": \"ldap://192.168.99.100:8389\",\n    \"userDn\": \"cn=admin,dc=example,dc=org\",\n    \"password\": \"sm\",\n    \"root\": \"dc=example,dc=org\",\n    \"userSearchBase\":\"ou=people\",\n    \"userAttribute\":\"uid\",\n    \"enabled\":true\n}"
+		},
+		{
+			"id": "d0fff2ec-e272-2eaa-8448-8a034f2a6062",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503140618275,
+			"name": "{{URL}}/login with Admin role",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n\t\"username\":\"admin_user1\",\n\t\"password\":\"secret\"\n}"
+		},
+		{
+			"id": "d2b4c92f-fa32-e862-e5fd-6f1edfae2247",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/modules",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503137185272,
+			"name": "{{URL}}/modules and not found system",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n    \"description\": \"create module with udpated system description\",\n    \"system\": {\n        \"description\": \"new sytem updated by module\",\n        \"id\": \"notexist\",\n        \"name\": \"new sytem updated by module\"\n    },\n    \"name\": \"create module with udpated system\"\n}"
+		},
+		{
+			"id": "d81a0303-a6aa-3fe6-64cb-4026d82221bf",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/systems/577e8a907000000000000003",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503119118973,
+			"name": "{{URL}}/systems/{id}",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n    \"description\": \"description 411\",\n    \"name\": \"name 411\"\n}"
+		},
+		{
+			"id": "e80ab0c9-1e94-43a6-60e6-67cdf250ee38",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/ldap-attributes",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503137101173,
+			"name": "{{URL}}/ldap-attributes",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": []
+		},
+		{
+			"id": "e933928c-a2b2-3fd0-c213-6ca2742831d1",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/policies?page=0&size=4&sort=name,asc&name=na&enabled=false",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "4",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "sort",
+					"value": "name,asc",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "na",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "enabled",
+					"value": "false",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503040185267,
+			"name": "get enabled=false policies",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": []
+		},
+		{
+			"id": "eb91c4cc-c831-6804-0e85-02c662eadeb1",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/systems/577e8a907000000000000004",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503119143846,
+			"name": "{{URL}}/systems/{id}",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "f44308b4-0c5d-2e7b-db1d-835f178d660a",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/headers/577e8a902000000000000002",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503495602721,
+			"name": "{{URL}}/headers/{id}",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n\t\"description\" : \"new description test\",\n\t\"headerName\" : \"new static header name test\",\n\t\"type\":\"Static\",\n\t\"value\":\"False\"\n}"
+		},
+		{
+			"id": "f4703a6d-128c-4bce-d94e-7f1eaf3ed44d",
+			"headers": "Authorization: Bearer {{TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/ldap-configurations/577e8a904000000000000002",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503116163022,
+			"name": "{{URL}}/ldap-configurations/{id}",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{    \n\t\"name\": \"new name\",\n    \"url\": \"ldap://localhost:8889\",\n    \"userDn\": \"uid=bob,ou=people,dc=example,dc=org\",\n    \"password\": \"bobspassword\",\n    \"root\": \"dc=example,dc=org\",\n    \"userSearchBase\":\"ou=people\",\n    \"userAttribute\":\"uid\",\n    \"enabled\":false\n}"
+		},
+		{
+			"id": "fef6084d-7a2d-391d-0c66-76da03ecc6a7",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503137011039,
+			"name": "{{URL}}/login with diabled user",
+			"description": "",
+			"collectionId": "aacac030-8179-b287-e1d6-2927c8881275",
+			"responses": [],
+			"rawModeData": "{\n\t\"username\":\"ro_user2\",\n\t\"password\":\"secret\"\n}"
+		}
+	]
+}

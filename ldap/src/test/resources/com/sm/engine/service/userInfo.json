@@ -1,0 +1,7 @@
+{
+  "userDN": "uid=ben,ou=people,dc=example,dc=org",
+  "groups": [
+    "developers",
+    "managers"
+  ]
+}

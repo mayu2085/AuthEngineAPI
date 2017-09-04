@@ -1,0 +1,1716 @@
+swagger: '2.0'
+info:
+  description: SM Engine CRUD API
+  version: "1.0.0"
+  title: SM Engine CRUD API
+
+# tags are used for organizing operations
+tags:
+- name: Admin
+  description: Secured Admin-only calls
+- name: Admin, RW
+  description: Operations available to Admin and Read Write role
+- name: Admin, RW, RO
+  description: Operations available to all roles - Admin, Read Write, and Read Only
+
+# Notes: id and createdAt/lastModifiedAt properties should be stripped and ignored in POST and PUT body request, except the ids of referenced documents
+
+paths:
+  /login: 
+    post:
+      tags:
+        - Admin, RW, RO
+      summary: login with ldap user
+      parameters:
+      - in: body
+        name: login
+        description: the username/password to login
+        schema:
+          $ref: '#/definitions/LoginRequest'
+      responses:
+        200:
+          description: search results matching criteria
+          schema:
+             $ref: '#/definitions/LoginResponse'
+        400:
+          description: bad input parameter
+          schema:
+            $ref: '#/definitions/Error'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+            
+            
+  /activity-logs:
+    get:
+      tags:
+      - Admin
+      summary: searches activity logs
+      parameters:
+      - in: query
+        name: page
+        description: the 0-based page index for pagination, default to 0 if missing or invalid
+        required: false
+        type: integer
+        format: int32
+        minimum: 0
+        default: 0
+      - in: query
+        name: size
+        description: the page size for pagination, default to 20 if missing or invalid
+        required: false
+        type: integer
+        format: int32
+        minimum: 0
+        default: 20
+      - in: query
+        name: sort
+        description: the sorting criteria in the format `property(,asc|desc)`. The property is ignored if invalid. The direction defaults to ascending if missing or invalid. E.g. `sort=documentType,asc&sort=operationType,desc`
+        required: false
+        type: array
+        items:
+          type: string
+      - in: query
+        name: operationType
+        description: the operation type, using exact matching (i.e `= :operationType`)
+        required: false
+        type: string
+        enum: [Create, Delete, Change]
+      - in: query
+        name: documentType
+        description: the document type operated on criterion, using containing match (i.e. `LIKE = %:documentType%`)
+        required: false
+        type: string
+      - in: query
+        name: operatedBy
+        description: the operated by username criterion, using containing match (i.e. `LIKE = %:operatedBy%`)
+        required: false
+        type: string
+      - in: query
+        name: description
+        description: the description criterion, using containing match (i.e. `LIKE %:description%`)
+        required: false
+        type: string
+      responses:
+        200:
+          description: search results matching criteria
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ActivityLogSearchResult'
+        400:
+          description: bad input parameter
+          schema:
+            $ref: '#/definitions/Error'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+  
+  /headers:
+    get:
+      tags:
+      - Admin, RW, RO
+      summary: searches headers
+      parameters:
+      - in: query
+        name: page
+        description: the 0-based page index for pagination, default to 0 if missing or invalid
+        required: false
+        type: integer
+        format: int32
+        minimum: 0
+        default: 0
+      - in: query
+        name: size
+        description: the page size for pagination, default to 20 if missing or invalid
+        required: false
+        type: integer
+        format: int32
+        minimum: 0
+        default: 20
+      - in: query
+        name: sort
+        description: the sorting criteria in the format `property(,asc|desc)`. The property is ignored if invalid. The direction defaults to ascending if missing or invalid. E.g. `sort=username,asc&sort=role,desc`
+        required: false
+        type: array
+        items:
+          type: string
+      - in: query
+        name: name
+        description: the name criterion, using containing match (i.e. `LIKE %:name%`)
+        required: false
+        type: string
+      responses:
+        200:
+          description: search results matching criteria
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/HeaderSearchResult'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      tags:
+      - Admin, RW
+      summary: creates a header
+      parameters:
+      - in: body
+        name: header
+        description: the header to add
+        schema:
+          $ref: '#/definitions/Header'
+      responses:
+        200:
+          description: the created header
+          schema:
+            $ref: '#/definitions/Header'
+        400:
+          description: invalid input, or duplicated name
+          schema:
+            $ref: '#/definitions/Error'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+
+  /headers/{id}:
+    get:
+      tags:
+      - Admin, RW, RO
+      summary: get a header by id
+      parameters:
+      - in: path
+        name: id
+        description: the header id to get
+        required: true
+        type: string
+        format: ObjectId
+      responses:
+        200:
+          description: the header
+          schema:
+            $ref: '#/definitions/Header'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        404:
+          description: not exist
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+    put:
+      tags:
+      - Admin, RW
+      summary: updates a header
+      parameters:
+      - in: path
+        name: id
+        description: the header id to update
+        required: true
+        type: string
+        format: ObjectId
+      - in: body
+        name: header
+        description: the header to update
+        schema:
+          $ref: '#/definitions/Header'
+      responses:
+        200:
+          description: the updated header
+          schema:
+            $ref: '#/definitions/Header'
+        400:
+          description: invalid input, or duplicated name
+          schema:
+            $ref: '#/definitions/Error'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        404:
+          description: not exist
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+    delete:
+      tags:
+      - Admin, RW
+      summary: deletes a header
+      parameters:
+      - in: path
+        name: id
+        description: the header id to delete
+        required: true
+        type: string
+        format: ObjectId
+      responses:
+        200:
+          description: OK
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        404:
+          description: not exist
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+
+  /headers/evaluate/{username}:
+    get:
+      tags:
+      - Admin, RW, RO
+      summary: gets the headers evaluate results for the specified username
+      parameters:
+      - in: path
+        name: username
+        description: the username to generate headers evaluate result
+        required: true
+        type: string
+        format: ObjectId
+      - in: query
+        name: moduleId
+        description: the module id to match policy
+        required: false
+        type: string
+        format: ObjectId
+      responses:
+        200:
+          description: the headers evaluate result
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/HeadersEvaluateResult'
+        404:
+          description: username does not exist in LDAP
+          schema:
+            $ref: '#/definitions/Error'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+            
+  /ldap-attributes:
+    get:
+      tags:
+      - Admin, RW, RO
+      summary: get the names of all LDAP attributes with `enabled = true`
+      responses:
+        200:
+          description: search results matching criteria
+          schema:
+            type: array
+            items:
+              description: the LDAP attribute name
+              type: string
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+
+  /ldap-configurations:
+    get:
+      tags:
+      - Admin
+      summary: searches LDAP configurations
+      parameters:
+      - in: query
+        name: page
+        description: the 0-based page index for pagination, default to 0 if missing or invalid
+        required: false
+        type: integer
+        format: int32
+        minimum: 0
+        default: 0
+      - in: query
+        name: size
+        description: the page size for pagination, default to 20 if missing or invalid
+        required: false
+        type: integer
+        format: int32
+        minimum: 0
+        default: 20
+      - in: query
+        name: sort
+        description: the sorting criteria in the format `property(,asc|desc)`. The property is ignored if invalid. The direction defaults to ascending if missing or invalid. E.g. `sort=username,asc&sort=role,desc`
+        required: false
+        type: array
+        items:
+          type: string
+      - in: query
+        name: name
+        description: the name criterion, using containing match (i.e. `LIKE %:name%`)
+        required: false
+        type: string
+      - in: query
+        name: enabled
+        description: the enabled criterion, using exact match (i.e. `= %:enabled%`)
+        required: false
+        type: boolean
+      responses:
+        200:
+          description: search results matching criteria
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/LdapConfigurationSearchResult'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      tags:
+      - Admin
+      summary: creates new LDAP configuration
+      parameters:
+        - in: body
+          name: ldapConfiguration
+          description: LDAP configuration to create
+          required: true
+          schema:
+            $ref: '#/definitions/LdapConfiguration'
+      responses:
+        200:
+          description: the created LDAP configuration
+          schema:
+            $ref: '#/definitions/User'
+        400:
+          description: invalid input, or duplicated name
+          schema:
+            $ref: '#/definitions/Error'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+  /ldap-configurations/{id}:
+    get:
+      tags:
+      - Admin
+      summary: get a LDAP configuration by id
+      parameters:
+      - in: path
+        name: id
+        description: the LDAP configuration id to get
+        required: true
+        type: string
+        format: ObjectId
+      responses:
+        200:
+          description: the LDAP configuration
+          schema:
+            $ref: '#/definitions/LdapConfiguration'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        404:
+          description: not exist
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+    put:
+      tags:
+      - Admin
+      summary: updates a LDAP configuration
+      parameters:
+      - in: path
+        name: id
+        description: the LDAP configuration id to update
+        required: true
+        type: string
+        format: ObjectId
+      - in: body
+        name: ldapConfiguration
+        description: the LDAP configuration to update
+        schema:
+          $ref: '#/definitions/LdapConfiguration'
+      responses:
+        200:
+          description: the updated LDAP configuration
+          schema:
+            $ref: '#/definitions/LdapConfiguration'
+        400:
+          description: invalid input, or duplicated name
+          schema:
+            $ref: '#/definitions/Error'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        404:
+          description: not exist
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+    delete:
+      tags:
+      - Admin
+      summary: deletes a LDAP configuration
+      parameters:
+      - in: path
+        name: id
+        description: the LDAP configuration id to delete
+        required: true
+        type: string
+        format: ObjectId
+      responses:
+        200:
+          description: OK
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        404:
+          description: not exist
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+
+  /modules:
+    get:
+      tags:
+      - Admin, RW, RO
+      summary: searches modules
+      parameters:
+      - in: query
+        name: page
+        description: the 0-based page index for pagination, default to 0 if missing or invalid
+        required: false
+        type: integer
+        format: int32
+        minimum: 0
+        default: 0
+      - in: query
+        name: size
+        description: the page size for pagination, default to 20 if missing or invalid
+        required: false
+        type: integer
+        format: int32
+        minimum: 0
+        default: 20
+      - in: query
+        name: sort
+        description: the sorting criteria in the format `property(,asc|desc)`. The property is ignored if invalid. The direction defaults to ascending if missing or invalid. E.g. `sort=username,asc&sort=role,desc`
+        required: false
+        type: array
+        items:
+          type: string
+      - in: query
+        name: name
+        description: the name criterion, using containing match (i.e. `LIKE %:name%`)
+        required: false
+        type: string
+      - in: query
+        name: systemId
+        description: the id of the system to which the modules belong, using exact match (i.e. `= %:systemId%`)
+        required: false
+        type: string
+      responses:
+        200:
+          description: search results matching criteria
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ModuleSearchResult'
+        400:
+          description: system id does not exist
+          schema:
+            $ref: '#/definitions/Error'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      tags:
+      - Admin, RW
+      summary: creates new module
+      parameters:
+        - in: body
+          name: module
+          description: the module to create
+          required: true
+          schema:
+            $ref: '#/definitions/Module'
+      responses:
+        200:
+          description: the created module
+          schema:
+            $ref: '#/definitions/Module'
+        400:
+          description: duplicated <name, system> key, or system id does not exist 
+          schema:
+            $ref: '#/definitions/Error'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+  /modules/{id}:
+    get:
+      tags:
+      - Admin, RW, RO
+      summary: get a module by id
+      parameters:
+      - in: path
+        name: id
+        description: the module id to get
+        required: true
+        type: string
+        format: ObjectId
+      responses:
+        200:
+          description: the module
+          schema:
+            $ref: '#/definitions/Module'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        404:
+          description: not exist
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+    put:
+      tags:
+      - Admin, RW
+      summary: updates a module
+      parameters:
+      - in: path
+        name: id
+        description: the module id to update
+        required: true
+        type: string
+        format: ObjectId
+      - in: body
+        name: module
+        description: the module to update
+        schema:
+          $ref: '#/definitions/Module'
+      responses:
+        200:
+          description: the updated module
+          schema:
+            $ref: '#/definitions/Module'
+        400:
+          description: duplicated <name, system> key, or system id does not exist 
+          schema:
+            $ref: '#/definitions/Error'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        404:
+          description: not exist
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+    delete:
+      tags:
+      - Admin, RW
+      summary: deletes a module
+      parameters:
+      - in: path
+        name: id
+        description: the module id to delete
+        required: true
+        type: string
+        format: ObjectId
+      responses:
+        200:
+          description: OK
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        404:
+          description: not exist
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+  
+  /policies:
+    get:
+      tags:
+      - Admin, RW, RO
+      summary: searches policies
+      parameters:
+      - in: query
+        name: page
+        description: the 0-based page index for pagination, default to 0 if missing or invalid
+        required: false
+        type: integer
+        format: int32
+        minimum: 0
+        default: 0
+      - in: query
+        name: size
+        description: the page size for pagination, default to 20 if missing or invalid
+        required: false
+        type: integer
+        format: int32
+        minimum: 0
+        default: 20
+      - in: query
+        name: sort
+        description: the sorting criteria in the format `property(,asc|desc)`. The property is ignored if invalid. The direction defaults to ascending if missing or invalid. E.g. `sort=username,asc&sort=role,desc`
+        required: false
+        type: array
+        items:
+          type: string
+      - in: query
+        name: name
+        description: the name criterion, using containing match (i.e. `LIKE %:name%`)
+        required: false
+        type: string
+      - in: query
+        name: moduleId
+        description: the id of module to which policies belong, using exact match (i.e. `= :moduleId`)
+        required: false
+        type: string
+      - in: query
+        name: enabled
+        description: the enabled flag of policy, using exact match (i.e. `= :enabled`)
+        required: false
+        type: boolean
+      responses:
+        200:
+          description: search results matching criteria
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/PolicySearchResult'
+        400:
+          description: bad input parameter
+          schema:
+            $ref: '#/definitions/Error'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+    delete:
+      tags:
+      - Admin, RW
+      summary: deletes policies by ids
+      parameters:
+      - in: query
+        name: ids
+        description: the policy ids to delete
+        required: true
+        type: array
+        minItems: 1
+        items:
+          type: string
+          format: ObjectId
+      responses:
+        200:
+          description: OK
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        404:
+          description: any id does not exist
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+    
+    post:
+      tags:
+      - Admin, RW
+      summary: creates a policy
+      parameters:
+      - in: body
+        name: policy
+        description: the policy to add
+        schema:
+          $ref: '#/definitions/Policy'
+      responses:
+        200:
+          description: the created policy
+          schema:
+            $ref: '#/definitions/Policy'
+        400:
+          description: invalid input, duplicated <name, module> key, rules contain duplicated names or null / duplicated items in ruleInfo, headers contain duplicated or null items or null / duplicated items in staticVariables and userVariables, module is does not exist
+          schema:
+            $ref: '#/definitions/Error'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+
+  /policies/{id}:
+    get:
+      tags:
+      - Admin, RW, RO
+      summary: gets a policy
+      parameters:
+      - in: path
+        name: id
+        description: the policy id to get
+        required: true
+        type: string
+        format: ObjectId
+      responses:
+        200:
+          description: the policy
+          schema:
+            $ref: '#/definitions/Policy'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        404:
+          description: not exist
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+    put:
+      tags:
+      - Admin, RW
+      summary: updates a policy
+      parameters:
+      - in: path
+        name: id
+        description: the policy id to update
+        required: true
+        type: string
+        format: ObjectId
+      - in: body
+        name: policy
+        description: the policy to update
+        schema:
+          $ref: '#/definitions/Policy'
+      responses:
+        200:
+          description: the updated policy
+          schema:
+            $ref: '#/definitions/Policy'
+        400:
+          description: invalid input, duplicated <name, module> key, rules contain duplicated names or null / duplicated items in ruleInfo, headers contain duplicated or null items or null / duplicated items in staticVariables and userVariables, module is does not exist
+          schema:
+            $ref: '#/definitions/Error'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        404:
+          description: not exist
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+    delete:
+      tags:
+      - Admin, RW
+      summary: deletes a policy
+      parameters:
+      - in: path
+        name: id
+        description: the policy id to delete
+        required: true
+        type: string
+        format: ObjectId
+      responses:
+        200:
+          description: OK
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        404:
+          description: not exist
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+   
+  /systems:
+    get:
+      tags:
+      - Admin, RW, RO
+      summary: searches systems
+      parameters:
+      - in: query
+        name: page
+        description: the 0-based page index for pagination, default to 0 if missing or invalid
+        required: false
+        type: integer
+        format: int32
+        minimum: 0
+        default: 0
+      - in: query
+        name: size
+        description: the page size for pagination, default to 20 if missing or invalid
+        required: false
+        type: integer
+        format: int32
+        minimum: 0
+        default: 20
+      - in: query
+        name: sort
+        description: the sorting criteria in the format `property(,asc|desc)`. The property is ignored if invalid. The direction defaults to ascending if missing or invalid. E.g. `sort=username,asc&sort=role,desc`
+        required: false
+        type: array
+        items:
+          type: string
+      - in: query
+        name: name
+        description: the name criterion, using containing match (i.e. `LIKE %:name%`)
+        required: false
+        type: string
+      responses:
+        200:
+          description: search results matching criteria
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/SystemSearchResult'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      tags:
+      - Admin, RW
+      summary: creates a system
+      parameters:
+      - in: body
+        name: system
+        description: the system to add
+        schema:
+          $ref: '#/definitions/System'
+      responses:
+        200:
+          description: the created system
+          schema:
+            $ref: '#/definitions/System'
+        400:
+          description: invalid input, or duplicated name
+          schema:
+            $ref: '#/definitions/Error'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+
+  /systems/{id}:
+    get:
+      tags:
+      - Admin, RW, RO
+      summary: get a system by id
+      parameters:
+      - in: path
+        name: id
+        description: the system id to get
+        required: true
+        type: string
+        format: ObjectId
+      responses:
+        200:
+          description: the system
+          schema:
+            $ref: '#/definitions/System'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        404:
+          description: not exist
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+    put:
+      tags:
+      - Admin, RW
+      summary: updates a system
+      parameters:
+      - in: path
+        name: id
+        description: the system id to update
+        required: true
+        type: string
+        format: ObjectId
+      - in: body
+        name: system
+        description: the system to update
+        schema:
+          $ref: '#/definitions/System'
+      responses:
+        200:
+          description: the updated system
+          schema:
+            $ref: '#/definitions/System'
+        400:
+          description: invalid input, or duplicated name
+          schema:
+            $ref: '#/definitions/Error'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        404:
+          description: not exist
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+    delete:
+      tags:
+      - Admin, RW
+      summary: deletes a system
+      parameters:
+      - in: path
+        name: id
+        description: the system id to delete
+        required: true
+        type: string
+        format: ObjectId
+      responses:
+        200:
+          description: OK
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        404:
+          description: not exist
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+ 
+  /users:
+    get:
+      tags:
+      - Admin
+      summary: searches users
+      parameters:
+      - in: query
+        name: page
+        description: the 0-based page index for pagination, default to 0 if missing or invalid
+        required: false
+        type: integer
+        format: int32
+        minimum: 0
+        default: 0
+      - in: query
+        name: size
+        description: the page size for pagination, default to 20 if missing or invalid
+        required: false
+        type: integer
+        format: int32
+        minimum: 0
+        default: 20
+      - in: query
+        name: sort
+        description: the sorting criteria in the format `property(,asc|desc)`. The property is ignored if invalid. The direction defaults to ascending if missing or invalid. E.g. `sort=username,asc&sort=role,desc`
+        required: false
+        type: array
+        items:
+          type: string
+      - in: query
+        name: username
+        description: the username criterion, using containing match (i.e. `LIKE %:username%`)
+        required: false
+        type: string
+      - in: query
+        name: role
+        description: the role criterion, using exact match (i.e. `= :role`)
+        required: false
+        type: string
+        enum: [Admin, RW, RO]
+      - in: query
+        name: enabled
+        description: the enabled criterion, using exact match (i.e. `= :enabled`)
+        required: false
+        type: boolean
+      responses:
+        200:
+          description: search results matching criteria
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/UserSearchResult'
+        400:
+          description: bad input parameter
+          schema:
+            $ref: '#/definitions/Error'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      tags:
+      - Admin
+      summary: creates a user
+      parameters:
+      - in: body
+        name: user
+        description: the user to add
+        schema:
+          $ref: '#/definitions/User'
+      responses:
+        200:
+          description: the created user
+          schema:
+            $ref: '#/definitions/User'
+        400:
+          description: invalid input, or duplicated username
+          schema:
+            $ref: '#/definitions/Error'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+
+  /users/{id}:
+    get:
+      tags:
+      - Admin
+      summary: get a user by id
+      parameters:
+      - in: path
+        name: id
+        description: the user id to get
+        required: true
+        type: string
+        format: ObjectId
+      responses:
+        200:
+          description: the user
+          schema:
+            $ref: '#/definitions/User'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        404:
+          description: not exist
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+    put:
+      tags:
+      - Admin
+      summary: updates a user
+      parameters:
+      - in: path
+        name: id
+        description: the user id to update
+        required: true
+        type: string
+        format: ObjectId
+      - in: body
+        name: user
+        description: the user to update
+        schema:
+          $ref: '#/definitions/User'
+      responses:
+        200:
+          description: the updated user
+          schema:
+            $ref: '#/definitions/User'
+        400:
+          description: invalid input, or duplicated username
+          schema:
+            $ref: '#/definitions/Error'
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        404:
+          description: not exist
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+    delete:
+      tags:
+      - Admin
+      summary: deletes a user
+      parameters:
+      - in: path
+        name: id
+        description: the user id to delete
+        required: true
+        type: string
+        format: ObjectId
+      responses:
+        200:
+          description: OK
+        401:
+          description: unauthorized, authentication is required to access
+          schema:
+            $ref: '#/definitions/Error'
+        403:
+          description: access denied, the logged in user's role is not allowed to access or user is disabled
+          schema:
+            $ref: '#/definitions/Error'
+        404:
+          description: not exist
+          schema:
+            $ref: '#/definitions/Error'
+        500:
+          description: internal server error
+          schema:
+            $ref: '#/definitions/Error'
+            
+definitions:
+  LoginRequest:
+    required:
+     - username
+     - password
+    type: object
+    properties:
+      username:
+        type: string
+      password:
+        type: string
+        
+  LoginResponse:
+    type: object
+    properties:
+      token:
+        type: string
+      user:
+        $ref: '#/definitions/User'
+        
+  HeadersEvaluateResult:
+    properties:
+      name:
+        type: string
+      value:
+        type: string
+        
+  SystemSearchResult:
+    properties:
+      total:
+        description: the number of records found
+        type: number
+        format: long
+      records:
+        type: array
+        items:
+          $ref: '#/definitions/System'
+  System:
+    required:
+      - name
+    properties:
+      id:
+        type: string
+        format: ObjectId
+      name:
+        type: string
+        uniqueItems: true
+      description:
+        type: string
+      createdAt:
+        description: the created date (auto generated by the system)
+        type: string
+        format: date
+      lastModifiedAt:
+        description: the last modified date (auto generated by the system)
+        type: string
+        format: date
+        
+  ModuleSearchResult:
+    properties:
+      total:
+        description: the number of records found
+        type: number
+        format: long
+      records:
+        type: array
+        items:
+          $ref: '#/definitions/Module'
+  Module:
+    required:
+      - name
+    properties:
+      id:
+        type: string
+        format: ObjectId
+      name:
+        type: string
+        description: the module name should be unique in a same system
+      description:
+        type: string
+      system:
+        $ref: '#/definitions/System'
+      createdAt:
+        description: the created date (auto generated by the system)
+        type: string
+        format: date
+      lastModifiedAt:
+        description: the last modified date (auto generated by the system)
+        type: string
+        format: date
+        
+  PolicySearchResult:
+    properties:
+      total:
+        description: the number of records found
+        type: number
+        format: long
+      records:
+        type: array
+        items:
+          $ref: '#/definitions/Policy'
+  Policy:
+    required:
+      - name
+      - enabled
+      - module
+    properties:
+      id:
+        type: string
+        format: ObjectId
+      name:
+        type: string
+        description: policy name should be unique in a same module
+      description:
+        type: string
+      enabled:
+        type: boolean
+      rules:
+        type: array
+        items:
+          $ref: '#/definitions/Rule'
+      module:
+        $ref: '#/definitions/Module'
+      createdAt:
+        description: the created date (auto generated by the system)
+        type: string
+        format: date
+      lastModifiedAt:
+        description: the last modified date (auto generated by the system)
+        type: string
+        format: date
+        
+  Rule:
+    required:
+      - ruleInfo
+      - header
+    properties:
+      name:
+        type: string
+        description: rule name should be unique in a same policy
+      ruleInfo:
+        description: list of LDAP attribute name-value pairs, the name should be unique in the list
+        type: array
+        minItems: 1
+        items:
+          $ref: '#/definitions/LdapAttributeNameValue'
+      header:
+         $ref: '#/definitions/Header'
+
+  LdapAttributeNameValue:
+    required:
+      - name
+      - value
+    properties:
+      name:
+        type: string
+        description: the LDAP attribute name
+      value:
+        type: string
+  HeaderSearchResult:
+    properties:
+      total:
+        description: the number of records found
+        type: number
+        format: long
+      records:
+        type: array
+        items:
+          $ref: '#/definitions/Header'
+  Header:
+    required:
+      - headerName
+      - value
+      - type
+    properties:
+      id:
+        type: string
+        format: ObjectId
+      headerName:
+        type: string
+        uniqueItems: true
+      type:
+        type: string
+        enum: [Dynamic, Static]
+      description:
+        type: string
+      value:
+        type: string
+      createdAt:
+        description: the created date (auto generated by the system)
+        type: string
+        format: date
+      lastModifiedAt:
+        description: the last modified date (auto generated by the system)
+        type: string
+        format: date        
+        
+  LdapConfigurationSearchResult:
+    properties:
+      total:
+        description: the number of records found
+        type: number
+        format: long
+      records:
+        type: array
+        items:
+          $ref: '#/definitions/LdapConfiguration'
+  LdapConfiguration:
+    required: 
+      - name
+      - url
+      - userDn
+      - password
+      - root
+      - userSearchBase
+      - userAttribute
+    properties:
+      id:
+        type: string
+        format: ObjectId
+      name:
+        type: string
+        uniqueItems: true
+      url:
+        type: string
+      userDn:
+        type: string
+      password:
+        type: string
+      root:
+        type: string
+        example: ou=<xyz>,o=<abc>
+      userSearchBase:
+        type: string
+        example: ou=people
+      userAttribute:
+        type: string
+      enabled:
+        type: boolean
+        example: true
+        
+  ActivityLogSearchResult:
+    properties:
+      total:
+        description: the number of records found
+        type: number
+        format: long
+      records:
+        type: array
+        items:
+          $ref: '#/definitions/ActivityLog'
+  ActivityLog:
+    properties:
+      id:
+        type: string
+        format: ObjectId
+      operationType:
+        description: the operation type
+        enum: [Create, Delete, Change]
+        example: Create
+      documentType:
+        description: the document type operated on
+        type: string
+        example: User
+      operatedBy:
+        description: the username of user who operated
+        type: string
+        example: user1
+      description:
+        description: the activity log description
+        type: string
+      createdAt:
+        description: the created date (auto generated by the system)
+        type: string
+        format: date
+      lastModifiedAt:
+        description: the last modified date (auto generated by the system)
+        type: string
+        format: date
+
+  UserSearchResult:
+    properties:
+      total:
+        description: the number of records found
+        type: number
+        format: long
+      records:
+        type: array
+        items:
+          $ref: '#/definitions/User'
+  User:
+    required:
+    - username
+    - role
+    - enabled
+    properties:
+      id:
+        type: string
+        format: ObjectId
+      username:
+        type: string
+        example: username1
+      role:
+        $ref: '#/definitions/Role'
+      enabled:
+        type: boolean
+        example: true
+  Role:
+    type: string
+    enum:
+      - Admin
+      - RW
+      - RO
+  Error:
+    properties:
+      message:
+        type: string
+        example: error message
+
+consumes:
+- application/json
+produces:
+- application/json
+
+securityDefinitions:
+  jwt:
+    description: "all endpoints except /login will require jwt token"
+    type: "apiKey"
+    name: "Authorization"
+    in: "header"
+security:
+  - jwt: []
+        
+host: sample.sm-engine.com
+basePath: /api/v1
+schemes:
+ - https

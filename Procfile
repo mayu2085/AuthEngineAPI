@@ -1,0 +1,1 @@
+web: java -jar crud/target/api.jar --spring.profiles.active=heroku --server.port=$PORT

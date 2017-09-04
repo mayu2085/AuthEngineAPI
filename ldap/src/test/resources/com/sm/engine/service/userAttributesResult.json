@@ -1,0 +1,6 @@
+{
+  "uid": "ben",
+  "sn": "Alex",
+  "cn": "Ben Alex",
+  "objectclass":["top","person","organizationalPerson","inetOrgPerson"]
+}
